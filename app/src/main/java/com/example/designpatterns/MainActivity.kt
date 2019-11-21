@@ -2,8 +2,13 @@ package com.example.designpatterns
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.designpatterns.creational.abstractFactory.auctionSiteProject
 import com.example.designpatterns.creational.abstractFactory.superBankSystem
+import com.example.designpatterns.creational.builder.Director
+import com.example.designpatterns.creational.builder.EnterpriseWebsiteBuilder
+import com.example.designpatterns.creational.builder.VisitCardWebsiteBuilder
+import com.example.designpatterns.creational.builder.Website
 import com.example.designpatterns.creational.factory.*
 import com.example.designpatterns.creational.singleton.ProgramLogger
 
@@ -22,7 +27,13 @@ class MainActivity : AppCompatActivity() {
 //        auctionSiteProject(this)
 
         //Usage creational.singleton
-        ProgramLogger.addStringToLogger("Here we go")
-        ProgramLogger.showLog(this)
+//        ProgramLogger.addStringToLogger("Here we go")
+//        ProgramLogger.showLog(this)
+
+        //Usage creational.builder
+        var director = Director()
+        director.builder = EnterpriseWebsiteBuilder()
+        var website: Website = director.buildWebsite()
+        Toast.makeText(this, website.toString(), Toast.LENGTH_LONG).show()
     }
 }
