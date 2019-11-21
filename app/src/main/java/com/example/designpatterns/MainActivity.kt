@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.designpatterns.creational.abstractFactory.auctionSiteProject
 import com.example.designpatterns.creational.abstractFactory.superBankSystem
 import com.example.designpatterns.creational.factory.*
+import com.example.designpatterns.creational.singleton.ProgramLogger
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +19,10 @@ class MainActivity : AppCompatActivity() {
 //        developer.writeCode(this)
 
         //Usage creational.abstractFactory
-        auctionSiteProject(this)
+//        auctionSiteProject(this)
+
+        //Usage creational.singleton
+        ProgramLogger.addStringToLogger("Here we go")
+        ProgramLogger.showLog(this)
     }
 }
