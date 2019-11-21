@@ -1,10 +1,9 @@
 package com.example.designpatterns.creational.factory
 
-import android.content.Context
-import android.widget.Toast
+import com.example.designpatterns.PushToLog
 
 class CppDeveloper: Developer {
-    override fun writeCode(context: Context) {
-       Toast.makeText(context, "Cpp developer writes cpp code", Toast.LENGTH_LONG).show()
+    override fun writeCode() {
+        PushToLog.l("Cpp developer writes cpp code")
     }
 }
