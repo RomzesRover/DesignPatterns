@@ -2,7 +2,6 @@ package com.example.designpatterns
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.designpatterns.creational.abstractFactory.auctionSiteProject
 import com.example.designpatterns.creational.abstractFactory.superBankSystem
 import com.example.designpatterns.creational.builder.Director
@@ -21,27 +20,29 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Usage creational.factory
-//        var developerFactory: DeveloperFactory = createDeveloperFactoryBySpecialty("php")
+//        var developerFactory: DeveloperFactory = createDeveloperFactoryBySpecialty("java")
 //        var developer = developerFactory.createDeveloper()
-//        developer.writeCode(this)
+//        developer.writeCode()
 
         //Usage creational.abstractFactory
-//        auctionSiteProject(this)
+//        superBankSystem()
 
         //Usage creational.singleton
+//        ProgramLogger.showLog()
 //        ProgramLogger.addStringToLogger("Here we go")
-//        ProgramLogger.showLog(this)
+//        ProgramLogger.showLog()
 
         //Usage creational.builder
 //        var director = Director()
-//        director.builder = EnterpriseWebsiteBuilder()
+//        director.builder = VisitCardWebsiteBuilder()
 //        var website: Website = director.buildWebsite()
-//        Toast.makeText(this, website.toString(), Toast.LENGTH_LONG).show()
+//        PushToLog.l(website.toString())
 
         //Usage creational.prototype
-        var project = Project(1, "hehe", "123")
-        var projectFactory = ProjectFactory(project)
-        var projectCopy = projectFactory.cloneProject()
-        Toast.makeText(this, projectCopy.toString(), Toast.LENGTH_LONG).show()
+//        var project = Project(1, "hehe", "123")
+//        PushToLog.l(project.toString())
+//        var projectFactory = ProjectFactory(project)
+//        var projectCopy = projectFactory.cloneProject()
+//        PushToLog.l(projectCopy.toString())
     }
 }
