@@ -2,7 +2,7 @@ package com.example.designpatterns
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.designpatterns.creational.singleton.run
+import com.example.designpatterns.structural.decorator.run
 
 class MainActivity : AppCompatActivity() {
 
