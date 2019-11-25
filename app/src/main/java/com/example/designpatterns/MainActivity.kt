@@ -12,6 +12,8 @@ import com.example.designpatterns.creational.factory.*
 import com.example.designpatterns.creational.prototype.Project
 import com.example.designpatterns.creational.prototype.ProjectFactory
 import com.example.designpatterns.creational.singleton.ProgramLogger
+import com.example.designpatterns.structural.adapter.AdapterJavaToDatabase
+import com.example.designpatterns.structural.adapter.Database
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,5 +46,12 @@ class MainActivity : AppCompatActivity() {
 //        var projectFactory = ProjectFactory(project)
 //        var projectCopy = projectFactory.cloneProject()
 //        PushToLog.l(projectCopy.toString())
+
+        //Usage structural.adapter
+        var database: Database = AdapterJavaToDatabase()
+        database.insert()
+        database.update()
+        database.select()
+        database.remove()
     }
 }
