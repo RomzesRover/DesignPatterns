@@ -14,6 +14,11 @@ import com.example.designpatterns.creational.prototype.ProjectFactory
 import com.example.designpatterns.creational.singleton.ProgramLogger
 import com.example.designpatterns.structural.adapter.AdapterJavaToDatabase
 import com.example.designpatterns.structural.adapter.Database
+import com.example.designpatterns.structural.bridge.BankSystem
+import com.example.designpatterns.structural.bridge.CppDeveloper
+import com.example.designpatterns.structural.bridge.JavaDeveloper
+import com.example.designpatterns.structural.bridge.Program
+import com.example.designpatterns.structural.bridge.StockExchange
 
 class MainActivity : AppCompatActivity() {
 
@@ -48,10 +53,14 @@ class MainActivity : AppCompatActivity() {
 //        PushToLog.l(projectCopy.toString())
 
         //Usage structural.adapter
-        var database: Database = AdapterJavaToDatabase()
-        database.insert()
-        database.update()
-        database.select()
-        database.remove()
+//        var database: Database = AdapterJavaToDatabase()
+//        database.insert()
+//        database.update()
+//        database.select()
+//        database.remove()
+
+        //Usage structural.bridge
+        var programs = arrayOf(BankSystem(JavaDeveloper()), StockExchange(CppDeveloper()))
+        programs.forEach { it.developProgram() }
     }
 }
