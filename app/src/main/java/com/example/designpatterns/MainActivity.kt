@@ -2,7 +2,7 @@ package com.example.designpatterns
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.designpatterns.structural.facade.run
+import com.example.designpatterns.structural.flyweight.run
 
 class MainActivity : AppCompatActivity() {
 
