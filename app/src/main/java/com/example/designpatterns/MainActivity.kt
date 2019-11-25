@@ -19,6 +19,7 @@ import com.example.designpatterns.structural.bridge.CppDeveloper
 import com.example.designpatterns.structural.bridge.JavaDeveloper
 import com.example.designpatterns.structural.bridge.Program
 import com.example.designpatterns.structural.bridge.StockExchange
+import com.example.designpatterns.structural.composite.run
 
 class MainActivity : AppCompatActivity() {
 
@@ -60,7 +61,10 @@ class MainActivity : AppCompatActivity() {
 //        database.remove()
 
         //Usage structural.bridge
-        var programs = arrayOf(BankSystem(JavaDeveloper()), StockExchange(CppDeveloper()))
-        programs.forEach { it.developProgram() }
+//        var programs = arrayOf(BankSystem(JavaDeveloper()), StockExchange(CppDeveloper()))
+//        programs.forEach { it.developProgram() }
+
+        //Usage structural.composite
+        run()
     }
 }
