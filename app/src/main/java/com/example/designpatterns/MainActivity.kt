@@ -2,7 +2,7 @@ package com.example.designpatterns
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.designpatterns.behavioral.interpreter.run
+import com.example.designpatterns.behavioral.iterator.run
 
 class MainActivity : AppCompatActivity() {
 
