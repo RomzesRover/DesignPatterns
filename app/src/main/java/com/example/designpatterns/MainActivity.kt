@@ -2,7 +2,7 @@ package com.example.designpatterns
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.designpatterns.behavioral.mediator.run
+import com.example.designpatterns.behavioral.memento.run
 
 class MainActivity : AppCompatActivity() {
 
